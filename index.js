@@ -1,4 +1,4 @@
-function getDateString(date){
+export function getDateString(date){
     let hours = (date.getHours() < 13)? date.getHours(): date.getHours () - 12;
     hours = (hours < 10) ? "0" + hours: hours;
 
@@ -24,5 +24,3 @@ function getDateString(date){
     return `${day} ${months[date.getMonth()]} ${date.getFullYear()} ` + hours + ":"
         + ((date.getMinutes() < 10)?"0" : "") + date.getMinutes() + ((date.getHours() < 13)? " AM":" PM");;
 }
-
-export function getDateString;
