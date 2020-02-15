@@ -24,3 +24,13 @@ export function getDateString(date){
     return `${day} ${months[date.getMonth()]} ${date.getFullYear()} ` + hour + ":"
         + ((date.getMinutes() < 10)?"0" : "") + date.getMinutes() + ((date.getHours() < 13)? " AM":" PM");;
 }
+
+export function insertString (str, insertString, countOfLetter = 10){
+    let resultString =  '';
+
+    for (let i = 0; i < str.length; i += countOfLetter) {
+        resultString += str.slice(i, i + countOfLetter) + insertString;
+    }
+
+    return resultString;
+}
